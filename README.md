@@ -1,0 +1,2 @@
+# Microphone OpenAI
+.NET project which uses the microphone input for speech to text transcription using the OpenAI endpoint [https://api.openai.com/v1/audio/transcriptions](https://api.openai.com/v1/audio/transcriptions).
