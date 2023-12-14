@@ -51,6 +51,11 @@ namespace MicrophoneOpenAI
 
         static void Main(string[] args)
         {
+            TranscribeSpeechFromMicrophone();
+        }
+
+        private static void TranscribeSpeechFromMicrophone()
+        {
             var waveIn = new WaveInEvent
             {
                 DeviceNumber = 0, // indicates which microphone to use
@@ -79,7 +84,7 @@ namespace MicrophoneOpenAI
                 countBelowNoiseLevel = 0;
                 int16ArrayList.AddLast(values);
             }
-            else
+            else if (max <= noiseLevel && int16ArrayList.Any())
             {
                 countBelowNoiseLevel++;
             }
